@@ -1,13 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link style="margin-top: 1;" rel="icon" type="image/svg+xml" href="src/assets/Logo.png" />
+    <link
+      style="margin-top: 1"
+      rel="icon"
+      type="image/svg+xml"
+      href="src/assets/Logo.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>syed_fazal_muhammad_and_co</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Add this script to handle redirects from 404.html -->
+    <script>
+      // Check if we were redirected from 404.html
+      const redirectPath = sessionStorage.getItem("redirectPath");
+      if (redirectPath) {
+        sessionStorage.removeItem("redirectPath");
+        history.replaceState(null, null, redirectPath);
+      }
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
