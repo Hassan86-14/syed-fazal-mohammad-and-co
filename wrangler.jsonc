@@ -1,9 +1,0 @@
-{
-  "name": "syed-fazal-mohammad-and-co",
-  "compatibility_date": "2025-12-28",
-   "main": "_worker.js",
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS"
-  }
-}
